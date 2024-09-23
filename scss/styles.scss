@@ -1,0 +1,64 @@
+/* Variables */
+@import 'colors';
+@import 'nav.scss';
+
+body {
+    background-color:$color-gold;
+}
+footer {
+    margin-left: 100px;
+}
+/* Nest Main */
+main {
+    width: 1350px;
+    min-height:535px;
+    display: flex;
+    padding: 25px;
+    margin: 20px auto;
+    background-color: $color-white;
+    
+    #intro-text{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        font-size: 1.5rem;
+        background-color: $color-light-gray;
+        span{
+            font-size: 2rem;
+            font-weight:600;
+            font-family: $font-cursive;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+    #intro-image {
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        img {
+            width: 50rem;
+            height: auto;
+        }
+    }
+    section{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    } 
+}
+
+// Mixin or Extend for button
+@mixin button-style {
+    margin-top: 1em;
+    background-color: $color-gold;
+    color: $color-white;
+    border: none;
+    padding: 10px 20px;
+    font-family: $font-main;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.submit-button {
+    @include button-style;
+}
